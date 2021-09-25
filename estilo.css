@@ -1,0 +1,80 @@
+.game{
+	width: 600px;
+	height: 200px;
+	border: 1px solid black;
+	margin: auto;
+}
+#message{
+	padding: 0;
+	margin: 0;
+	height: 20px;
+}
+#dino{
+	z-index: 2;
+	width: 50px;
+	height: 50px;
+	background-image: url(imagens/trex.png);
+	background-size: 50px 50px;
+	position: relative;
+	top: 130px;
+}
+
+.jump{
+	animation: jump 0.4s infinite;
+}
+
+.correr{
+	animation: correr 0.3s infinite;
+	animation-timing-function: linear;
+}
+@keyframes correr{
+	from{
+		background-image: url(imagens/trex1.png);
+	}
+	to{
+		background-image: url(imagens/trex2.png);
+	}
+}
+
+@keyframes jump{
+	0%{
+		top: 130px;
+	}
+	
+	20%{
+		top: 110px;
+	}
+	40%{
+		top: 60px;
+	}
+	60%{
+		top: 110px;
+	}
+	80%{
+		top: 130px;
+	}
+	100%{
+		top: 130px;
+	}
+}
+#cacto{
+	width: 20px;
+	height: 40px;
+	position: relative;
+	top: 90px;
+	left: 580px;
+	z-index: 1;
+	background-image: url(imagens/cactus.png);
+	background-size: 20px 40px;
+
+	animation: block 1s infinite linear;
+}
+
+@keyframes block{
+	0%{
+		left: 580px;
+	}
+	100%{
+		left: -20px;
+	}
+}
